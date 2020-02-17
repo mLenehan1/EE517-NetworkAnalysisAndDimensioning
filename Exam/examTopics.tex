@@ -1,0 +1,123 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[UKenglish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	top=20mm,
+	headheight=9pt,
+	bottom=20mm,
+}
+\pagestyle{empty}
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+	\def\svgwidth{\columnwidth}
+	\import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\begin{document}
+\thispagestyle{empty}
+	\begin{table}[h]
+		\centering
+		\caption{EE517 Network Analysis and Dimensioning Exam
+		Topic List}
+		\begin{tabular}{|c||c|c||c|c||}
+			\hline
+			\hline
+			Topic & 2019 & R & 2018 & R \\
+			\hline
+			Path Flows & \checkmark &  & \checkmark &
+			\checkmark \\
+			Link Incidence Matrix & \checkmark & \checkmark &
+			\checkmark & \checkmark \\
+			Link Capacity Contraints & \checkmark & \checkmark &
+			\checkmark & \checkmark \\
+			Routing Cost Minimisation & \checkmark & \checkmark &
+			\checkmark & \checkmark \\
+			Flow Allocation Problem & \checkmark & \checkmark &
+			\checkmark & \checkmark \\
+			Sketch of Feasible Region & \checkmark &  &
+			 &  \\
+			Link Scaling Factor & \checkmark &  &
+			 &  \\
+			Mean Packet Delay & \checkmark &  &
+			 &  \\
+			Uncapacitated Dimensioning Problem & \checkmark & \checkmark &
+			\checkmark &  \\
+			Shortest Path Allocation Rule & \checkmark & \checkmark &
+			\checkmark & \checkmark \\
+			Decoupled Form of Uncapacitated Dimensioning Problem
+			&\checkmark & & & \checkmark \\
+			Single Path Allocation Problem & \checkmark &  &
+			\checkmark &  \\
+			Path Labelling Scheme & \checkmark & \checkmark &
+			\checkmark & \checkmark \\
+			RWA & \checkmark & \checkmark &
+			\checkmark & \checkmark \\
+			Poisson pmf Mean and Variance & \checkmark &  &
+			\checkmark &  \\
+			Moment Generating Function & \checkmark &  &
+			\checkmark &  \\
+			Unconditional Waiting Time Distribution & \checkmark &  &
+			 & \checkmark \\
+			Upgraded Queueing Model & \checkmark &  &
+			 & \checkmark \\
+			WDM Dimensioning & \checkmark & \checkmark &
+			\checkmark & \checkmark \\
+			Moe's Principle & \checkmark & \checkmark &
+			\checkmark &  \\
+			Equivalent Random Method & \checkmark &  &
+			 & \checkmark \\
+			Blocking Probability & \checkmark & \checkmark &
+			\checkmark & \checkmark \\
+			Network Flow Allocation vs. Network Dimensioning Problem
+			&  & \checkmark &
+			 & \checkmark \\
+			Capacitated Flow Allocation Problem &  &  &
+			\checkmark &  \\
+			Wavelength Continuity Contraint &  & \checkmark &
+			\checkmark &  \\
+			Markov Chain vs Ergodic Process vs Homogeneous Process
+			&  & \checkmark &
+			 & \checkmark \\
+			Transition Probability Matrix &  & \checkmark &
+			 & \checkmark \\
+			Probability Calculation &  & \checkmark &
+			 & \checkmark \\
+			Mean Wait Time in M/G/1 &  & \checkmark &
+			\checkmark & \checkmark \\
+			Moments &  & \checkmark &
+			\checkmark &  \\
+			Mean System Delay &  & \checkmark &
+			\checkmark &  \\
+			Expected Busy Channels &  &  &
+			\checkmark &  \\
+			Call Congestion &  & \checkmark &
+			\checkmark & \checkmark \\
+			Macro Cells &  & \checkmark &
+			\checkmark &  \\
+			Trunking Efficiency &  &  &
+			\checkmark &  \\
+			Multi-Layer Network Dimensioning Problem &  &  &
+			 & \checkmark \\
+			Demand-Path-Identifier vs. Node-Identifier Notation &  &  &
+			 & \checkmark \\
+			Time vs. Call vs. Traffic Congestion &  &  &
+			\checkmark & \checkmark \\
+			\hline
+			\hline
+		\end{tabular}
+	\end{table}
+\end{document}
