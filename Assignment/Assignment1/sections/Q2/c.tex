@@ -1,0 +1,18 @@
+The demand volumes (in DVUs) are $h_1 = 14$ and $h_2 = 13$. The link capacities
+are $c_1 = 12$,  $c_2 = 15$, and $c_3 = 3$.
+
+In order to minimise the routing costs, try to route all traffic over direct
+links. There is sufficient capacity to route demand volume  $h_2$ over direct
+link, as the capacity is 15. This leaves an unused capacity of 2 on the link
+$e=2$. Demand volume  $h_1$ can then be routed over link  $e=1$, with the
+remaining demand volume routed over  $e=2$ and  $e=3$. This results in a
+capacity of 1 remaining on link  $e=3$.
+
+As such, the optimal values for ${x_d,p}$ are:
+
+\begin{align*}
+	x_{1,1} &= 12 \\
+	x_{1,2} &= 2 \\
+	x_{2,1} &= 13 \\
+	x_{2,2} &= 0
+\end{align*}

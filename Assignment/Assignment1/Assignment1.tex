@@ -1,17 +1,19 @@
-\documentclass[a4paper 12pt]{article}
+\documentclass[a3paper 12pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}
 \usepackage{textcomp}
 \usepackage[UKenglish]{babel}
-\usepackage{amsmath, amssymb}
+\usepackage{amsmath, amssymb, mathtools}
 \usepackage{float}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
+\definecolor{backcolor}{rgb}{0.95,0.95,0.92}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \usepackage{listings}
 \lstdefinestyle{code}{
+	backgroundcolor=\color{backcolor},
 	commentstyle=\color{codegreen},
 	keywordstyle=\color{magenta},
 	stringstyle=\color{codepurple},
@@ -51,13 +53,73 @@
 \pagenumbering{alph}
 \input{cover/declaration}
 \pagenumbering{arabic}
-\input{sections/abstract}
 \tableofcontents
 \clearpage
-\section{Introduction}
-\input{sections/introduction}
-\section{Conclusion}
-\input{sections/conclusion}
+\setlength{\abovedisplayskip}{-20pt}%
+\setlength{\belowdisplayskip}{-10pt}%
+\setlength{\abovedisplayshortskip}{0pt}%
+\setlength{\belowdisplayshortskip}{0pt}%
+\setlength{\jot}{0pt}% Inter-equation spacing
+\section{Question 1}
+\input{sections/Q1/q1}
+\section{Question 2}
+\subsection{Part a}
+\input{sections/Q2/a}
+\subsection{Part b}
+\input{sections/Q2/b}
+\subsection{Part c}
+\input{sections/Q2/c}
+\subsection{Part d}
+\input{sections/Q2/d}
+\subsection{Part e}
+\input{sections/Q2/e}
+\subsection{Part f}
+\input{sections/Q2/f}
+\section{Question 3}
+\subsection{Part a}
+\input{sections/Q3/a}
+\subsection{Part b}
+\input{sections/Q3/b}
+\section{Question 4}
+\subsection{Part a}
+\input{sections/Q4/a}
+\subsection{Part b}
+\input{sections/Q4/b}
+\section{Question 5}
+\subsection{Part a}
+\input{sections/Q5/a}
+\subsection{Part b}
+\input{sections/Q5/b}
+\subsection{Part c}
+\input{sections/Q5/c}
+\section{Question 6}
+\subsection{Part a}
+\input{sections/Q6/a}
+\subsection{Part b}
+\input{sections/Q6/b}
+\subsection{Part c}
+\input{sections/Q6/c}
+\subsection{Part d}
+\input{sections/Q6/d}
+\subsection{Part e}
+\input{sections/Q6/e}
+\section{Question 7}
+\input{sections/Q7/7}
+\section{Question 8}
+\subsection{Part a}
+\input{sections/Q8/a}
+\subsection{Part b}
+\input{sections/Q8/b}
+\section{Question 9}
+\subsection{Part a}
+\input{sections/Q9/a}
+\subsection{Part b}
+\input{sections/Q9/b}
+\section{Question 10}
+\subsection{Part a}
+\input{sections/Q10/a}
+\subsection{Part b}
+\input{sections/Q10/b}
 \clearpage
 \printbibliography
 \end{document}

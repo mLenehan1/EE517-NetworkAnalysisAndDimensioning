@@ -1,0 +1,41 @@
+\begin{align*}
+	x_{1,1} + x_{1,2} = h_1 = 15 \\
+	x_{2,1} + x_{2,2} = h_2 = 13 \\
+	x_{1,1} + x_{2,2} \le c_1 + z \\
+	\therefore 12 + 0 \le 12 + z \\
+	x_{1,2} + x_{2,1} \le c_2 + z \\
+	\therefore 3 + 13 \le 15 + z \\
+	x_{1,2} + x_{2,2} \le c_3 + z \\
+	\therefore 3 + 0 \le 3 + z \\
+\end{align*}
+
+From these equations it can be seen that for link 1, the value of z is 0, for
+link 2 the value of z is $\ge$ 1, and for link 3 the value of z is again 0.
+
+Increasing the link capacity of $c_2$ by 1 DVU - i.e. $c_2 = 16$ - would fulfil
+the demand volumes given. This would result in flow path variables as follows:
+
+ \begin{align*}
+	 x_{1,1} &= 12 \\
+	 x_{1,2} &= 3 \\
+	 x_{2,1} &= 13 \\
+	 x_{2,2} &= 0
+\end{align*}
+
+The resulting link loads are as follows:
+
+\begin{align*}
+	y_e &= \sum_{d}\sum_{p} \delta_{e,d,p}x_{d,p} \\
+	y_1 &= \sum_{d}\sum_{p}\delta_{1,d,p}x_{d,p} \\
+	    &= x_{1,1}+x{2,2} \\
+	    &= 12 + 0 \\
+	    &= 12 \\
+	y_2 &= \sum_{d}\sum_{p}\delta_{2,d,p}x_{d,p} \\
+	    &= x_{2,1}+x{1,2} \\
+	    &= 13 + 3 \\
+	    &= 16 \\
+	y_3 &= \sum_{d}\sum_{p}\delta_{3,d,p}x_{d,p} \\
+	    &= x_{1,2}+x{2,2} \\
+	    &= 3 + 0 \\
+	    &= 3
+\end{align*}

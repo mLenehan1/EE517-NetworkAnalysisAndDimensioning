@@ -1,0 +1,93 @@
+The given information is as follows:
+
+\begin{align*}
+	\text{Demand 1: } \mathbb{P}_1 = \{P_{1,1}\} &= \{2,4\} \\
+	\text{Demand 2: } \mathbb{P}_2 = \{P_{2,1}, P_{2,2}\} &=
+	\{\{5\},\{4,3\}\} \\
+	\text{Demand 3: } \mathbb{P}_3 = \{P_{3,1}, P_{3,2}\} &=
+	\{\{1\},\{3,2\}\} \\
+	\text{Demand Volumes: } \{h_1,h_2,h_3\} &= \{17,17,12\} \\
+	\text{Marginal Link Costs: } \{\xi,\xi,\xi,\xi,\xi\}
+	&= \{2,1,1,3,1\} \\
+	\text{Link Capacities: } \{c_1,c_2,c_3\} &= \{10,20,20\}
+.\end{align*}
+
+Demand $h_1$ has a path cost of 4 on path $P_{1,1}$. There is a
+capacity of 20 on link 2. This results in the following path flow variable:
+
+ \begin{align*}
+	 x_{1,1} &=17
+.\end{align*}
+
+Demand $h_2$ has a path cost of 1 on path $P_{2,1}$, and a cost of 4 on path
+$P_{2,2}$. Path $P_{2,1}$ has no defined capacity, while path $P_{2,2}$ has
+a capacity of 10 on link 3. This results in the following path flow variables:
+
+\begin{align*}
+	x_{2,1} &= 17 \\
+	x_{2,2} &= 0
+.\end{align*}
+
+Finally, demand $h_3$ has a path cost of 2 on path $P_{3,1}$, and a cost of 2 on
+path  $P_{3,2}$. There is a capacity of 20 on link 1, a remaining capacity of 3
+on link 2, and a capacity of 10 on link 3. This results in the following path flow variables:
+
+ \begin{align*}
+	 x_{3,1} &= a+2 \\
+	 x_{3,2} &= 10-a
+.\end{align*}
+
+The solutions for these flows give the link load values below:
+
+\begin{align*}
+	x^*_{1,2} + x^*_{3,1} = \underline{y_1} &= a+2 \\
+	x^*_{1,1} + x^*_{3,2} = \underline{y_2} &= 27-a \\
+	x^*_{2,2} + x^*{3,2} = \underline{y_3} &= 10-a \\
+	x^*_{2,2} + x^*{1,1} = \underline{y_4} &= 17 \\
+	x^*_{2,1} = \underline{y_5} &= 17
+.\end{align*}
+
+This gives the objective function:
+
+\begin{align*}
+	F^* &= 2\times(a+2)+1\times(27-a)+1\times(10-a)+3\times(17)+1\times(17)
+	\\
+	    &= 2a+4+27-a+10-a+51+17 \\
+	    &= 109
+.\end{align*}
+
+\begin{table}[H]
+	\centering
+	\caption{Shortest Path Allocation}
+	\label{tab:label}
+	\begin{tabular}{||c|c|c|c|c|c||}
+	\hline
+	\rowcolor{gray!50}
+	$a$ & $\underline{y_{1}}$ & $\underline{y_2}$ & $\underline{y_3}$ &
+	$\underline{y_4}$ & $\underline{y_5}$ \\
+	\hline
+	10 & 12 & 17 & 0  & 17 & 17 \\
+	9  & 11 & 18 & 1  & 17 & 17 \\
+	8  & 10 & 19 & 2  & 17 & 17 \\
+	7  & 9  & 20 & 3  & 17 & 17 \\
+	6  & 8  & 21 & 4  & 17 & 17 \\
+	5  & 7  & 22 & 5  & 17 & 17 \\
+	4  & 6  & 23 & 6  & 17 & 17 \\
+	3  & 5  & 24 & 7  & 17 & 17 \\
+	2  & 4  & 25 & 8  & 17 & 17 \\
+	1  & 3  & 26 & 9  & 17 & 17 \\
+	0  & 2  & 27 & 10 & 17 & 17 \\
+	\hline \hline
+	\end{tabular}
+\end{table}
+
+As the link capacities $\{c_1, c_2, c_3\} = \{10,20,20\}$ it can be seen that
+the only solutions for a can be 8 or 7, as all other values give numbers which
+exceed the capacities for these links. With $a=8$ the maximum link load is
+minimised -  $a=8 \therefore \text{max }y_e = 19$ vs  $a=7 \therefore
+\text{max }y_e = 20$
+
+It is clear from the options presented above that the solution is not unique.
+The value of `$a$' can be chosen based on a secondary constraint, or the demand
+$d=2$ could have been routed over path  $P_2,2}$, however, this would not
+provide an optimal solution.

@@ -1,0 +1,75 @@
+Given the decoupled problems in section a, the following values were calculated:
+
+\begin{align*}
+	\text{General Form: } F &= \sum_{d}\sum_{p}\zeta_{d,p}x_{d,p}\\
+	\text{Where: } \zeta_{d,p} &= \sum_e\xi_{e}\delta_{e,d,p} \\
+	F_1 = \zeta_{1,p}x_{1,p} &= (4(1))0+(3(1))17 = 51 \\
+	F_2 = \zeta_{2,p}x_{2,p} &= (1(1))17+(4(1))0 = 17 \\
+	F_3 = \zeta_{3,p}x_{3,p} &= (2(1))\frac{12}{2}+(2(1))\frac{12}{2} = 24
+.\end{align*}
+
+This gives a total value for the objective function of:
+
+\begin{align*}
+	F^* &= F_1 + F_2 +F_3 \\
+	    &= 51 + 17 + 24 \\
+	    &= 92
+.\end{align*}
+
+The solutions for the flows give the link load values below:
+
+\begin{align*}
+	x^*_{1,2} + x^*_{3,1} = \underline{y}_1 &= 17 + a \\
+	x^*_{1,1} + x^*_{3,2} = \underline{y}_2 &= 12 - a \\
+	x^*_{2,2} + x^*_{3,2} = \underline{y}_3 &= 12 - a \\
+	x^*_{1,1} + x^*_{2,2} = \underline{y}_4 &= 0 \\
+	x^*_{1,2} + x^*_{2,1} = \underline{y}_5 &= 34
+.\end{align*}
+
+Therefore, the objective function value is confirmed by calculating the objective function using the link loads and
+link marginal costs:
+
+\begin{align*}
+	F^* &= 2\times(17+a) + 1\times(12-a) + 1\times(12-a) + 3\times(0) +
+	1\times(34)\\
+	    &= 34 + 2a + 12 - a + 12 - a + 34\\
+	    &= 92
+.\end{align*}
+
+\begin{table}[H]
+	\centering
+	\caption{Shortest Path Allocation}
+	\label{tab:label}
+	\begin{tabular}{||c|c|c|c|c|c||}
+	\hline
+	\rowcolor{gray!50}
+	$a$ & $\underline{y_1}$ & $\underline{y_1}$ & $\underline{y_3}$ &
+	$\underline{y_4}$ & $\underline{y_5}$ \\
+	\hline
+	12 & 29 & 0  & 0  & 0 & 34 \\
+	11 & 28 & 1  & 1  & 0 & 34 \\
+	10 & 27 & 2  & 2  & 0 & 34 \\
+	9  & 26 & 3  & 3  & 0 & 34 \\
+	8  & 25 & 4  & 4  & 0 & 34 \\
+	7  & 24 & 5  & 5  & 0 & 34 \\
+	6  & 23 & 6  & 6  & 0 & 34 \\
+	5  & 22 & 7  & 7  & 0 & 34 \\
+	4  & 21 & 8  & 8  & 0 & 34 \\
+	3  & 20 & 9  & 9  & 0 & 34 \\
+	2  & 19 & 10 & 10 & 0 & 34 \\
+	1  & 18 & 11 & 11 & 0 & 34 \\
+	0  & 17 & 12 & 12 & 0 & 34 \\
+	\hline \hline
+	\end{tabular}
+\end{table}
+
+With a value of 12 for a, there are 3 links which do not require capacity to be
+provisioned.
+
+
+
+
+
+
+
+

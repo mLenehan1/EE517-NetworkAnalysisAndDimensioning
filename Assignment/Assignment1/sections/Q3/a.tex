@@ -1,0 +1,19 @@
+Re-formulating the problem as a modified flow-allocation problem results in the
+following formulation:
+
+Minimize:
+
+\begin{align*}
+	z
+\end{align*}
+
+Subject to:
+
+\begin{align*}
+	x_{1,1} + x_{1,2} &= h_1 \\
+	x_{2,1} + x_{2,2} &= h_2 \\
+	x_{1,1} + x_{2,1} &\le c_1 + z \\
+	x_{1,2} + x_{2,1} &\le c_2 + z \\
+	x_{1,2} + x_{2,2} &\le c_3 + z \\
+	x_{1,1},x_{1,2},x_{2,1},x_{2,2} &\ge 0
+\end{align*}

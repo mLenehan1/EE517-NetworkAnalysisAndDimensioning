@@ -1,0 +1,47 @@
+The given information is as follows:
+
+\begin{align*}
+	\mathbb{P}_1 = \{P_{1,1}, P_{1,2}, P_{1,3}\} &=
+	\{\{2,4\},\{1,5\},\{4,3,1\}\} \\
+	\mathbb{P}_2 = \{P_{2,1}, P_{2,2}\} &= \{\{5\},\{4,3\}\} \\
+	\mathbb{P}_3 = \{P_{3,1}, P_{3,2}\} &= \{\{1\},\{3,2\}\} \\
+	(h_1, h_2, h_3) &= (17, 17, 12) \\
+	(c_1, c_2, c_3, c_4, c_5) &= (20, 20, 20, 20, 20)
+.\end{align*}
+
+There is no objective function, and as such there are no link costs, i.e.
+$\xi_e=0$.
+
+Each demand must be split across two paths, therefore $k_d = 2$.
+
+The formulation is, therefore, as follows:
+
+\begin{align*}
+	\sum_p u_{d,p} &= k_d \\
+	\sum_d(\sum_p\delta_{e,d,p}u_{d,p})h_d/k_d &\le c_e
+.\end{align*}
+
+The value of $u_{d,p}$ must be greater than 0 for at least two paths for each
+demand. Therefore, each path for both $\mathbb{P}_2$ and $\mathbb{P}_3$ must be
+used.
+
+ \begin{align*}
+	 \therefore u_{2,1} + u_{2,2} &= 2 \\
+	 u_{3,1} + u_{3,2} &= 2
+.\end{align*}
+
+For path $\mathbb{P}_1$, the paths must be chosen such that the link capacities
+are not exceeded. Solving for paths  $\mathbb{P}_2$ and $\mathbb{P}_3$ will give
+an insight into the remaining link capacities, allowing for a solution for
+$\mathbb{P}_1$ to be found.
+
+For path $\mathbb{P}_2$, link 5, 4, and 3 carry some of the demand, with half of
+the demand over link 5, and the other half over links 4 and 3.
+
+For path  $\mathbb{P}_3$, links 1, 3, and 2 carry some of the demand, with half
+of the demand over link 1, and the other half over links 3 and 2.
+
+This indicates that link 3 is carrying 14.5 units of demand
+($\frac{17}{2}+\frac{12}{2}$), which does not leave enough capacity for the
+remaining demand of demand volume $h_1$. Therefore, it is assumed that the paths
+taken from $\mathbb{P}_1$ are  $P_{1,1}$ and  $P_{1,2}$
