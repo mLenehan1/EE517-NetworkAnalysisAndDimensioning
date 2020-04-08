@@ -1,0 +1,31 @@
+Given:
+
+\begin{align*}
+	\text{Poisson Distribution: } p(k) &= \frac{\lambda^ke^{-\lambda}}{k!}\\
+	\text{Probability Generating Function: } G(z) &\triangleq E[z^k] =
+	\sum_{\forall k \in \Omega} z^kpx(k) \\
+	\text{nth Central Moment: } \mu_n &= E[(X-E[X])^2] \\
+	G(z) = \sum_{k=0}^{\infty} z^k\frac{\lambda^ke^{-\lambda}}{k!} &=
+	e^{-\lambda}\sum_{k=0}^{\infty} \frac{(z\lambda)^k}{k!}\\
+	e^{-\lambda}e^{z\lambda} &= e^{(z-1)\lambda}\\
+	\text{ith Moment: } \overline{X^i} &=
+	\left.\frac{d}{dz}(z\frac{d}{dz})^{i-1}G(z)\right|_{z=1}\\
+	\text{First Moment: } \overline{X} = \left.\frac{d}{dz}
+	G(z)\right|_{z=1} &= \left.\frac{d}{dz} e^{(z-1)\lambda}\right|_{z=1}\\
+	&= \lambda\\
+	\text{Second Moment: } \overline{X^2} &=
+	\left.\frac{d}{dz}z\frac{d}{dz}G(z)\right|_{z=1}\\
+	&= \left.\frac{d}{dz}z(\frac{d}{dz}e^{(z-1)\lambda})\right|_{z=1}\\
+	&= \lambda^2 + \lambda\\
+	\therefore \text{Third Moment: } \overline{X^3} &=
+	\left.\frac{d}{dz}(z\frac{d}{dz})^2G(z)\right|_{z=1}\\
+	&= \left.\frac{d}{dz}z(\frac{d}{dz}\lambda e^{(z-1)\lambda})\\
+	&= \lambda^3 + 3\lambda^2 + \lambda\\
+	\text{Third Central Moment: } \mu_3 &= E[(X-E[X])^3]\\
+	&= E[X^3]-3E[X^2]E[X]+3E[x]E^2[X]-E^3[X]\\
+	&= \lambda^3+3(\lambda^2+\lambda) -3(\lambda^2+\lambda)(\lambda)
+	+3(\lambda)(\lambda)^2 - \lambda^3\\
+	&= \lambda^3 +3\lambda^3 - 3\lambda^3 -\lambda^3 + 3\lambda^2 -
+	3\lambda^2 + \lambda\\
+	&= \lambda
+.\end{align*}

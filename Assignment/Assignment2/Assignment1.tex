@@ -8,10 +8,12 @@
 \usepackage{amsmath, amssymb}
 \usepackage{float}
 \usepackage{xcolor}
+\definecolor{backcolor}{rgb}{0.95,0.95,0.92}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \usepackage{listings}
 \lstdefinestyle{code}{
+	backgroundcolor=\color{backcolor},
 	commentstyle=\color{codegreen},
 	keywordstyle=\color{magenta},
 	stringstyle=\color{codepurple},
@@ -51,13 +53,25 @@
 \pagenumbering{alph}
 \input{cover/declaration}
 \pagenumbering{arabic}
-\input{sections/abstract}
 \tableofcontents
 \clearpage
-\section{Introduction}
-\input{sections/introduction}
-\section{Conclusion}
-\input{sections/conclusion}
+\section{Question 1}
+\input{sections/Q1/q1}
+\section{Question 2}
+\input{sections/Q2/Pa}
+\input{sections/Q2/Pb}
+\input{sections/Q2/Pc}
+\section{Question 3}
+\input{sections/Q3/Pa}
+\input{sections/Q3/Pb}
+\section{Question 4}
+\input{sections/Q4/q4}
+\section{Question 5}
+\input{sections/Q5/q5}
+\section{Question 6}
+\input{sections/Q6/Pa}
+\input{sections/Q6/Pb}
+\input{sections/Q6/Pc}
 \clearpage
 \printbibliography
 \end{document}

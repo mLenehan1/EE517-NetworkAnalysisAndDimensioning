@@ -1,0 +1,9 @@
+[0] Config.pm:304> INFO - This is Biber 2.12
+[1] Config.pm:307> INFO - Logfile is 'Assignment1.blg'
+[37] biber:315> INFO - === Tue Apr  7, 2020, 20:39:57
+[77] Biber.pm:371> INFO - Reading 'Assignment1.bcf'
+[157] Biber.pm:889> INFO - Found 0 citekeys in bib section 0
+[163] Utils.pm:193> WARN - The file 'Assignment1.bcf' does not contain any citations!
+[170] bbl.pm:636> INFO - Writing 'Assignment1.bbl' with encoding 'UTF-8'
+[171] bbl.pm:739> INFO - Output to Assignment1.bbl
+[171] Biber.pm:110> INFO - WARNINGS: 1
