@@ -1,0 +1,29 @@
+\subsection{Part 2}
+
+\begin{align*}
+	\text{Given: } & A_{micA} = 20 \\
+		       & A_{micB} = 30 \\
+		       & A_{micC} = 25 \\
+	               & A_{mac} = 5 \\
+		       & B \le 0.0 \\
+	\hat{M_1} &= A_{micA}E(N_{mic}, A_{micA}) \\
+	\hat{V_1} &=
+	\hat{M_1}(1-\hat{M_1}+A_{micA}/(N_{mic}+1-A_{micA}+\hat{M_1})) \\
+	\hat{M_2} &= A_{micB}E(N_{mic}, A_{micB}) \\
+	\hat{V_2} &=
+	\hat{M_2}(1-\hat{M_2}+A_{micB}/(N_{mic}+1-A_{micB}+\hat{M_2})) \\
+	\hat{M_3} &= A_{micC}E(N_{mic}, A_{micC}) \\
+	\hat{V_3} &=
+	\hat{M_3}(1-\hat{M_3}+A_{micC}/(N_{mic}+1-A_{micC}+\hat{M_3})) \\
+	\hat{M_4} &= A_{mac}E(N_{mac}, A_{mac}) \\
+	\hat{V_4} &=
+	\hat{M_4}(1-\hat{M_4}+A_{mac}/(N_{mac}+1-A_{mac}+\hat{M_4})) \\
+	M &= \hat{M_1} + \hat{M_2} + \hat{M_3} + \hat{M_4} \\
+	V &= \hat{M_1} + \hat{M_2} + \hat{M_3} + \hat{M_4} \\
+	\text{Rapps Approximations: } \\
+	A^* &\approx V + 3Z(Z-1) \\
+	N^* &\approx A^* (M+Z)/(M+Z-1) - M - 1 \\
+	\text{Where: } Z &= V/M \\
+	\text{Final Blocking Probability: } \\
+	B &= E(A^*, N^*+N_{mac})
+.\end{align*}

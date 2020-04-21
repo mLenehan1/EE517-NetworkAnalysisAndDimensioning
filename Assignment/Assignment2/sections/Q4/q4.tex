@@ -1,0 +1,20 @@
+\begin{align*}
+	\text{Distribution of the Waiting Time:} \\
+	F_{W}(T) &= 1 - \rho e^{-\mu(1-\rho)t} \\
+	\text{Probability of Delay > t} \\
+	Pr[W > t] &= 1 - F_{W}(t) = \rho e^{-\mu(1-\rho)t} \\
+	\text{Given:} \\
+	t &= 0.001 \\
+	\lambda &= 1000 \\
+	\mu &= \text{Link Capacity} / \text{Mean Packet Length (bits)} \\
+	\therefore Pr[W>t] &= \frac{\lambda}{\mu} e^{i-\mu(1-\lambda/\mu)t} \\
+			   &= \frac{\lambda*(700*8)}{\text{Link
+				   Capacity}} e^{(-\text{Link Capacity}/(700*8) +
+			   \lambda)(0.001)} \\
+			   &= \frac{5.6x10^{6}}{\text{Link Capacity}}
+			   e^{(-\frac{0.001*\text{Link Capacity}}{5600} +
+			   1)}
+.\end{align*}
+
+Using trial-and-error, a value of 23Mbps ($23x10^{6}$) gives an approximate
+probability value of $0.01089$.
